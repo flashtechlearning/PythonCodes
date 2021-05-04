@@ -1,3 +1,7 @@
+#####################
+# Automated Process to push all python files for the first time a repo is created in github and the repo
+# is owned by the user and all other settings for gitbash are enabled in the system
+#####################
 import subprocess
 
 #p1 = subprocess.run('git --version', shell = True , text = True , capture_output = True)
@@ -37,6 +41,8 @@ for i in final_files_from_git_status:
     print(i)
 
 
-# p3 = subprocess.run('git add ', shell = True , text = True, capture_output = True)
+p3 = subprocess.run('git add .', shell = True , text = True, capture_output = True)
 #
-# p3 = subprocess.run('git commit -m "Automated commit"', shell = True , text = True, capture_output = True)
+p4 = subprocess.run('git commit -m "Automated commit"', shell = True , text = True, capture_output = True)
+
+p5 = subprocess.run('git push', shell = True , text = True, capture_output = True)
