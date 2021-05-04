@@ -1,6 +1,6 @@
 
 
-string1 = '         dummy.py file'
+string1 = '             dummy.py file'
 
 find_item = '.py'
 
