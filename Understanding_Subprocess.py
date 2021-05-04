@@ -18,6 +18,6 @@ child_proccess = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess
 #child_process_output = child_proccess.communicate()[0]
 time.sleep(5)
 
-child_proccess.stdin.close()
+
 
 #print(child_process_output)

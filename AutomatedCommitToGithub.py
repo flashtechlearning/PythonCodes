@@ -4,9 +4,8 @@
 #####################
 import subprocess
 
-# with open('git_status.txt' , 'w') as f:
-
-p1 = subprocess.run('git status', shell = True , text = True , capture_output = True)
+with open('git_status.txt' , 'w') as f:
+    p1 = subprocess.run('git status', shell = True , text = True , stdout = f)
 
 string1 = '.py'
 
