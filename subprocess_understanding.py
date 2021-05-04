@@ -4,15 +4,9 @@
 #####################
 import subprocess
 
-#p1 = subprocess.run('git --version', shell = True , text = True , capture_output = True)
+# with open('git_status.txt' , 'w') as f:
 
-
-#p1_output = p1.stdout
-
-
-
-with open('git_status.txt' , 'w') as f:
-    p2 = subprocess.run('git status', shell = True , text = True , stdout = f)
+p1 = subprocess.run('git status', shell = True , text = True , capture_output = True)
 
 string1 = '.py'
 
@@ -40,11 +34,20 @@ for i in all_string:
 for i in final_files_from_git_status:
     print(i)
 
-with open('git_status.txt' , 'a') as f:
-    p3 = subprocess.run('git add .', shell = True , text = True, stdout = f)
-#
-with open('git_status.txt' , 'a') as f:
-    p4 = subprocess.run('git commit -m "Automated commit"', shell = True , text = True, stdout = f)
+# with open('git_status.txt' , 'a') as f:
+#     p3 = subprocess.run('git add .', shell = True , text = True , capture_output = True)
 
-with open('git_status.txt' , 'a') as f:
-    p5 = subprocess.run('git push', shell = True , text = True, stdout = f)
+p2 = subprocess.run('git add *.py', shell = True , text = True , capture_output = True)
+# with open('git_status.txt' , 'a') as f:
+#     p4 = subprocess.run('git commit -m "Automated commit"', shell = True , text = True, stdout = f)
+
+p3 = subprocess.run('git commit -m "Automated commit"', shell = True , text = True , capture_output = True)
+
+#with open('git_status.txt' , 'a') as f:
+p4 = subprocess.run('git push', shell = True , text = True , capture_output = True)
+
+with open('git_automatted_commit.txt' , 'w') as f:
+    f.write(p1.stdout)
+    f.write(p2.stdout)
+    f.write(p3.stdout)
+    f.write(p4.stdout)
