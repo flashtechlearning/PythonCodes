@@ -51,3 +51,6 @@ with open('git_automatted_commit.txt' , 'w') as f:
     f.write(p2.stdout)
     f.write(p3.stdout)
     f.write(p4.stdout)
+
+
+f.close()
