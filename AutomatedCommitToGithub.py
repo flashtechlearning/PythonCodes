@@ -46,7 +46,6 @@ p3 = subprocess.run('git commit -m "Automated commit"', shell = True , text = Tr
 p4 = subprocess.run('git push', shell = True , text = True , capture_output = True)
 
 with open('git_automatted_commit.txt' , 'w') as f:
-    f.write(p1.stdout)
     f.write(p2.stdout)
     f.write(p3.stdout)
     f.write(p4.stdout)
